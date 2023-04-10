@@ -10,7 +10,7 @@ import { route } from "../src/router/route";
 import { navigateToPath } from "../src/utils/navigateToPath";
 import { getActiveComponent } from "../src/utils/getActiveComponent";
 
-export default function Home() {
+export default function Video() {
   const [collapsed, setCollapsed] = useState(false);
   const router = useRouter();
   const { user: currentUser } = useCurrentUser();
@@ -22,7 +22,7 @@ export default function Home() {
         <Menu
           theme="dark"
           mode="inline"
-          defaultSelectedKeys={["0"]}
+          defaultSelectedKeys={["1"]}
           onClick={(e) => navigateToPath({ key: Number(e.key), router })}
           items={route}
         />
@@ -49,7 +49,7 @@ export default function Home() {
             padding: 24,
           }}
         >
-          {getActiveComponent(0)}
+          {getActiveComponent(1)}
         </Content>
       </Layout>
     </Layout>
